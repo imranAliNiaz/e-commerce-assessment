@@ -1,74 +1,94 @@
 import React from "react";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
-const poppins = Poppins({
-  weight: '500',
-  subsets: ['latin'],
-  display: 'swap'
-})
-const headingCategory = Poppins({
-  weight: '700',
-  subsets: ['latin'],
-  display: 'swap'
-})
 
-const categories = [
-  {
-    name: "Natural Plants",
-    imgSrc: "/assets/Frame 36.png",
-  },
-  {
-    name: "Plant Accessories",
-    imgSrc: "/assets/Frame 38.png",
-    desc: "Horem ipsum dolor sit amet, consectetur.",
-  },
-  {
-    name: "Artificial Plants",
-    imgSrc: "/assets/Frame 37.png",
-  },
-];
+const poppins = Poppins({
+  weight: "500",
+  subsets: ["latin"],
+  display: "swap",
+});
+const headingCategory = Poppins({
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const Categories = () => (
-  <section className=" py-16 w-full">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className={headingCategory.className}>
-        <h2 className="text-[32px] text-[#1E1E1E] font-bold mb-2 text-center">Categories</h2>
-      </div>
-      <div className={poppins.className}>
-        <p className="text-center mb-10 text-[18px] text-[#1E1E1E80]">Find what you are looking for</p>
-      </div>
-      </div>
-      <div className="flex flex-col md:flex-row gap-8 justify-center bg-[#C1DCDC] w-full">
-        {categories.map((cat, idx) => (
-          <div
-            key={idx}
-            className={`flex-1 flex flex-col items-center rounded-lg p-6 ${
-              cat.desc ? "shadow-lg" : ""
-            }`}
-          >
-            <div className="relative w-full h-[24rem] mb-5">
-              <Image
-                src={cat.imgSrc}
-                alt={cat.name}
-                fill
-                style={{ objectFit: "cover", borderRadius: "0.375rem" }}
-                quality={100}
-                priority={idx === 0} // Optionally prioritize first image
-              />
-            </div>
-            <div className="font-semibold">{cat.name}</div>
-            {cat.desc && (
-              <>
-                <p className="text-sm text-gray-500 mb-6">{cat.desc}</p>
-                <button className="bg-[#48806b] text-white px-4 py-1 rounded-md">
-                  Explore
-                </button>
-              </>
-            )}
-          </div>
-        ))}
-      </div>
+  <section className="w-full">
     
+    <div className="bg-white pt-16">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className={headingCategory.className}>
+          <h2 className="text-[32px] text-[#1E1E1E] font-bold mb-2 text-center">
+            Categories
+          </h2>
+        </div>
+        <div className={poppins.className}>
+          <p className="text-center mb-10 text-[18px] text-[#1E1E1E80]">
+            Find what you are looking for
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div className="bg-[#C1DCDC] py-12 mt-4">
+      <div className="flex flex-col md:flex-row gap-10 justify-center max-w-7xl mx-auto px-6">
+        <div className="flex flex-col items-center rounded-lg max-w-[600px] md:-mt-20">
+          <div className="relative w-[300px] h-[28rem] mb-5">
+            <Image
+              src="/assets/Frame 36.png"
+              alt="Natural Plants"
+              fill
+              style={{ objectFit: "cover", borderRadius: "0.75rem" }}
+              quality={100}
+              priority
+            />
+          </div>
+          <div className={headingCategory.className}>
+            <h1 className="font-semibold text-[#1E1E1E] text-[18px] text-center">Natural Plants</h1>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center rounded-lg px-6 py-6 max-w-[600px]">
+          <div className="relative w-[300px] h-[28rem] mb-5">
+            <Image
+              src="/assets/Frame 38.png"
+              alt="Plant Accessories"
+              fill
+              style={{ objectFit: "cover", borderRadius: "0.75rem" }}
+              quality={100}
+            />
+          </div>
+          <div className={headingCategory.className}>
+            <h1 className="font-semibold text-[#1E1E1E] text-[18px] text-center">Plant Accessories</h1>
+          </div>
+          <p className="text-sm text-gray-500 mb-6 text-center">
+            Horem ipsum dolor sit amet,<br/> consectetur adipiscing elit.
+          </p>
+          <button className="bg-white border border-gray-300 hover:bg-gray-100 text-black flex items-center gap-2 px-4 py-2 rounded-md text-sm">
+            Explore
+            <span className="text-lg">→</span>
+          </button>
+        </div>
+
+        <div className="flex flex-col items-center rounded-lg max-w-[300px] md:-mt-20">
+          <div className="relative w-[300px] h-[28rem] mb-5">
+            <Image
+              src="/assets/Frame 37.png"
+              alt="Artificial Plants"
+              fill
+              style={{ objectFit: "cover", borderRadius: "0.75rem" }}
+              quality={100}
+            />
+          </div>
+          <div className={headingCategory.className}>
+            <h1 className="font-semibold text-[#1E1E1E] text-[18px] text-center">Artificial Plants</h1>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 );
 

@@ -5,6 +5,11 @@ const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap'
 })
+const headingSelling = Poppins({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap'
+})
 const products = [
   {
     imgSrc: "/assets/Frame 9.png",
@@ -27,17 +32,20 @@ export default function BestSellingSection() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex flex-col md:flex-row gap-4">
-        {/* Section 1 */}
         <div className="flex-1  rounded-lg p-8 flex flex-col justify-center">
-          <h1 className="text-4xl font-extrabold mb-6">Main Heading</h1>
-          <p className="text-xl font-semibold text-green-700 mb-3">Best Selling Plants</p>
-          <p className="text-gray-700 mb-8">
+          <div className={headingSelling.className}>
+            <h1 className="text-4xl text-[32px] text-[#1E1E1E] font-extrabold mb-6">Best Selling Plants</h1>
+          </div>
+          
+          <div className={poppins.className}>
+            <p className="text-[#1E1E1E80] mb-8">
             Easiest way to healthy life by buying your favorite plants
           </p>
+          </div>
           <div>
              <button
             type="button"
-            className="inline-flex items-center text-[#1E1E1E] bg-[#C1DCDC]  py-2 px-4 rounded-md font-semibold transition"
+            className="inline-flex items-center text-[#1E1E1E] bg-[#C1DCDC]  py-2 px-4 rounded-md font-semibold transition cursor-pointer"
           >
             See More
             <svg
@@ -57,7 +65,7 @@ export default function BestSellingSection() {
           
         </div>
 
-        {/* Sections 2,3,4 */}
+        
         {products.map(({ imgSrc, title, price }, idx) => (
           <div
             key={idx}

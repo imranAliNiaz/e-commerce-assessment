@@ -12,9 +12,9 @@ const poppins=Poppins({
 const NavBar = () => {
   return (
     <div className="max-w-6xl h-24 mx-auto flex items-center">
-      {/* Container flex with space-between to place flex items at left, center, right */}
+      
       <div className="flex justify-between items-center w-full max-w-6xl mx-auto">
-        {/* Logo aligned left */}
+        
         <div className="font-bold text-xl text-[#1E1E1E] cursor-pointer">
             <div className={poppins.className}>
               GREENMIND
@@ -22,14 +22,14 @@ const NavBar = () => {
           
         </div>
 
-        {/* Nav links centered, with horizontal spacing */}
+        
         <nav className="flex space-x-8 text-[#1E1E1E] text-lg cursor-pointer">
           <a href="#" className={poppins.className}>Home</a>
           <a href="#" className={poppins.className}>Products</a>
           <a href="#" className={poppins.className}>Contacts</a>
         </nav>
 
-        {/* Icons aligned right with some spacing */}
+       
         <div className="flex items-center space-x-6 text-[#1E1E1E]   cursor-pointer">
           <MdOutlineLocalGroceryStore className='w-6 h-6'/>
           <MdOutlinePerson className='w-6 h-6'/>

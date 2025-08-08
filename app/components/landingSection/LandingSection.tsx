@@ -15,7 +15,7 @@ const poppins = Poppins({
   display: 'swap'
 })
 
-// You can further subdivide Section1, Section2 etc. if needed
+
 const LandingSection = () => (
   <section className="w-full bg-white">
     <NavBar />
@@ -32,7 +32,6 @@ const LandingSection = () => (
             <span className="font-bold text-[18px]">50+</span>
             <span className="block text-sm">Plant Species</span>
           </div>
-          {/* Divider line */}
           <div className="h-8 w-px bg-black mx-2" />
           <div className={poppins.className}>
             <span className="font-bold text-[18px]">100+</span>
@@ -52,22 +51,20 @@ const LandingSection = () => (
         </div>
       </div>
       <div className="flex-1 flex items-center justify-center relative min-h-[320px]">
-        {/* Vector 186: the bottom left spiral/arrow */}
         <img
           src="assets/Vector 186.png"
           alt="Vector 186"
           className="absolute left-[-36px] bottom-0 w-28 h-28 object-contain z-10"
         />
-
-        {/* Rectangle 2, main black-ish circle */}
+ 
         <div className="relative top-20">
+
           <img
           src="assets/Rectangle 2.png"
           alt="Rectangle"
           className="w-[620px] h-72 object-contain rounded-full z-20"
         />
 
-        {/* Centered plant image */}
         <img
           src="assets/unsplash_cLaaxa4DSnc-removebg-preview 1.svg"
           alt="Plant in pot"
@@ -76,7 +73,6 @@ const LandingSection = () => (
         </div>
         
 
-        {/* Vector 187: the upper curved arrow */}
         <img
           src="assets/Vector 187.png"
           alt="Vector 187"
