@@ -11,9 +11,9 @@ const poppins=Poppins({
 
 const NavBar = () => {
   return (
-    <div className="max-w-6xl h-24 mx-auto flex items-center">
+    <div className="max-w-7xl md:h-24 h-20 mx-auto flex items-center">
       
-      <div className="flex justify-between items-center w-full max-w-6xl mx-auto">
+      <div className="flex justify-between items-center w-full px-4 md:px-0  mx-auto">
         
         <div className="font-bold text-xl text-[#1E1E1E] cursor-pointer">
             <div className={poppins.className}>
@@ -23,7 +23,7 @@ const NavBar = () => {
         </div>
 
         
-        <nav className="flex space-x-8 text-[#1E1E1E] text-lg cursor-pointer">
+        <nav className="md:flex hidden space-x-8 text-[#1E1E1E] text-lg cursor-pointer">
           <a href="#" className={poppins.className}>Home</a>
           <a href="#" className={poppins.className}>Products</a>
           <a href="#" className={poppins.className}>Contacts</a>

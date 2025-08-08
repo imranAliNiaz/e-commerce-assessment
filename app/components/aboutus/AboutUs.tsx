@@ -49,8 +49,8 @@ const features = [
 
 const AboutUs = () => (
   <section className="w-full bg-white">
-    <div className="max-w-7xl mx-auto px-6 py-12">
-      <div className="text-center mb-12">
+    <div className="max-w-7xl mx-auto px-6 md:py-10 py-4">
+      <div className="text-center md:mb-12 mb-6">
         <div className={headingAbout.className}>
           <h2 className="text-[32px] text-[#1E1E1E] font-bold mb-2">About us</h2>
         </div>
@@ -58,11 +58,11 @@ const AboutUs = () => (
           <p className="text-[18px] text-[#1E1E1E80]">Order now and appreciate the beauty of nature</p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center gap-8 px-2 md:px-0">
         {features.map((f, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center  p-6 rounded-lg w-full md:w-1/3"
+            className="flex flex-col items-center  md:p-6 p-4 rounded-lg hover:bg-gray-100 w-full md:w-1/3"
           >
             {f.icon}
             <div className={headingAbout.className}>
